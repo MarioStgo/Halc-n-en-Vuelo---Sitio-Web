@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en" class="has-navbar-fixed-top">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Band Template</title>
+    <link rel="shortcut icon" href="../images/fav_icon.png" type="image/x-icon">
+    <!-- Bulma Version 1-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@1.0.2/css/bulma.min.css" />
+    <script defer src="https://use.fontawesome.com/releases/v5.0.10/js/all.js"></script>
+    <style>
+        .grid .cell{
+            display: flex;
+        }
+        .evento-caja{
+            height: 100%;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1.5rem;
+        }
+        .evento-caja .image img{
+            height: 300px;
+            object-fit: contain;
+            background-color: #f5f5f5;
+        }
+        .evento-caja .button{
+            margin-top: auto;
+        }
+        html{
+            scroll-behavior: smooth;
+            scroll-padding-top: 55px;
+        }
+        .foto-musico{
+            object-fit: cover !important;
+            height: 100% !important;
+            width: 100% !important;
+        }
+        /*Dispositivos moviles - hero*/
+        @media screen and (max-width: 1024px) {
+            #inicio .image img{
+                height: auto !important;
+                object-fit: contain;
+            }
+            #inicio.hero.is-fullheight .hero-body{
+                padding: 0;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            .section#eventos .grid{
+                display: block !important;
+            }
+            .section#eventos .grid .cell{
+                width: 100% !important;
+                display: block !important;
+            }
+            .evento-caja{
+                height: auto !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar is-white is-fixed-top">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="https://bulma.io">
+                <img src="https://bulma.io/assets/images/bulma-logo.png"
+                    alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
+            </a>
+            <div class="navbar-burger burger" data-target="navbarExampleTransparentExample">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+
+        <div id="navbarExampleTransparentExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="#inicio">Inicio</a>
+                <a class="navbar-item" href="#trio">Trio Huasteco</a>
+                <a class="navbar-item" href="#eventos">Eventos</a>
+                <a class="navbar-item" href="#contacto">Contacto</a>
+                <div class="navbar-item has-dropdown is-hoverable">
+                    <a class="navbar-link" href="/documentation/overview/start/">Más</a>
+                    <div class="navbar-dropdown is-boxed">
+                        <a class="navbar-item" href="/documentation/overview/start/">Mercancias</a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/modifiers/syntax/">Extras</a>
+                        <a class="navbar-item" href="https://bulma.io/documentation/columns/basics/">Media</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div class="navbar-item">
+                    <div class="field">
+                        <div class="control">
+                            <input class="input" type="text" placeholder="Buscar . . .">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="hero" id="inicio">
+        <figure class="image">
+            <img src="img/principal.jpg" style="height: calc(100vh - 52px); object-fit:cover; object-position: center top; width: 100%;">
+        </figure>
+    </section>
+
+    <section class="section" id="trio">
+        <div class="container has-text-centered">
+            <h2 class="title">Trio Huasteco - H en Vuelo</h2>
+            <p>Desde el corazón de la Huasteca Potosina, en la vibrante comunidad de Cuechod, municipio de San Antonio,
+                S.L.P., nace <b>Halcón en Vuelo (H en Vuelo).</b> Somos un Trio
+                Huasteco dedicado a preservar y compartir la magia de nuestras raíces. A través del lamento del
+                violín, el repique de la jarana y el temple de la quinta huapanguera, llevamos el son
+                huasteco a cada rincón. Nuestro vuelo es la música de nuestros ancestros, y nuestro propósito es que
+                el huapango nunca deje de sonar y zapatearse.
+                </b></p>
+
+            <div class="columns is-centered" style="padding: 2rem">
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="Img/pepe.jpg" alt="Placeholder image" class="foto-musico">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">José Nicasio</p>
+                                    <p class="subtitle is-6">@nicasio</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p><b>José Nicasio Santiago Santiago ></b> Violín Huasteco. El encargado de guiar el vuelo del
+                                    Halcón. Con su arco y cuerdas, le da vida a la melodia principal, marcando entradas
+                                    y salidas con el caracteristico "lamento" que eriza la piel.</p>
+                                <a>@violinista</a>.
+                                <a href="#">H en Vuelo</a>
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="Img/cepi.jpg" alt="Placeholder image" class="foto-musico">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Venancio</p>
+                                    <p class="subtitle is-6">@venancio</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p><b>Venancio Salvador Hernández ></b> Jarana Huasteca. El corazón ritmico de H en Vuelo. Con
+                                    el repique constante y agudo de las cinco cuerdas de su jarana, mantiene viva la
+                                    energia y el pulso que invitan a todos a zapatear.
+                                </p>
+                                <a>@jaranero</a>.
+                                <a href="#">#H en Vuelo</a>
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-2by1">
+                                <img src="Img/luis.jpg" alt="Placeholder image" class="foto-musico">
+                            </figure>
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-content">
+                                    <p class="title is-4">Luis Alberto</p>
+                                    <p class="subtitle is-6">@luis</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                <p><b>Luis Alberto Santiago Santiago ></b> Quinta Huapanguera. La base profunda que sostiene al
+                                    trio. Con los bajos potentes y la caja de resonancia grande de la quinta
+                                    huapanguera, le da peso, cuerpo y ritmo a cada canción.</p>
+                                <a>@quintahuapanguera</a>.
+                                <a href="#">#H en Vuelo</a>
+                                <a href="#"></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+
+    <section class="section" id="eventos">
+        <div class="container has-text-centered">
+            <h2 class="title">Eventos</h2>
+
+            <div class="grid">
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 1.jpg">
+                        </figure>
+                        <p class="title">Xilitla, S.L.P.</p>
+                        <p class="subtitle">Sab 10 Agos 2024</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 2.jpg">
+                        </figure>
+                        <p class="title">Tampacán, S.L.P.</p>
+                        <p class="subtitle">Vier 15 Agos 2024</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 3.jpg">
+                        </figure>
+                        <p class="title">San Lorenzo Itztacoyotal, Hgo</p>
+                        <p class="subtitle">Vier 02 Mar 2024</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 4.jpg">
+                        </figure>
+                        <p class="title">San Antonio, S.L.P.</p>
+                        <p class="subtitle">Vier 11 Jun 2025</p>
+                        <a class="button">Buy Tickets</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 5.jpg">
+                        </figure>
+                        <p class="title">Ahuacatlan, S.L.P.</p>
+                        <p class="subtitle">Lun 15 Sep 2025</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+            </div>
+
+            <div class="grid">
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 6.jpg">
+                        </figure>
+                        <p class="title">Antiguo Morelos, Tam</p>
+                        <p class="subtitle">Mar 25 Dic 2025</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="IMg/img 7.jpg">
+                        </figure>
+                        <p class="title">Huehuetlan, S.L.P.</p>
+                        <p class="subtitle">Mar 17 Mar 2026</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 8.jpg">
+                        </figure>
+                        <p class="title">Huejutla, Hgo</p>
+                        <p class="subtitle">Lun 09 Abr 2026</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="Img/img 9.jpg">
+                        </figure>
+                        <p class="title">Tancanhuitz, S.L.P.</p>
+                        <p class="subtitle">Vie 03 Abr 2026</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+                <div class="cell">
+                    <article class="box evento-caja">
+                        <figure class="image">
+                            <img
+                                src="IMg/img 10.jpg">
+                        </figure>
+                        <p class="title">Monterrey, N.L.</p>
+                        <p class="subtitle">Sab 04 Abr 2026</p>
+                        <a class="button">Ver más</a>
+                    </article>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" id="contacto">
+        <div class="container has-text-centered">
+            <h2 class="title">Contacto</h2>
+
+            <form>
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <p class="control has-icons-left">
+                                <input class="input" type="text" placeholder="Nombre">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-user"></i>
+                                </span>
+                            </p>
+                        </div>
+                        <div class="field">
+                            <p class="control has-icons-left has-icons-right">
+                                <input class="input" type="email" placeholder="Email">
+                                <span class="icon is-small is-left">
+                                    <i class="fas fa-envelope"></i>
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <textarea class="textarea" placeholder="Escribe tu mensaje"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field is-horizontal">
+                    <div class="field-body">
+                        <div class="field">
+                            <div class="control">
+                                <button class="button is-primary">
+                                    Enviar Mensaje
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="content has-text-centered">
+                <p>
+                    <a href="">
+                        <i class="fab fa-facebook-square fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-twitter-square fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="">
+                        <i class="fab fa-snapchat fa-2x"></i>
+                    </a>
+                </p>
+                <p>
+                    <a href="https://bulma.io">
+                        <img src="https://bulma.io/assets/images/made-with-bulma.png" alt="Made with Bulma" width="128"
+                            height="24">
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+    <script src="../js/bulma.js"></script>
+</body>
+<script src="script.js"></script>
+
+</html>
